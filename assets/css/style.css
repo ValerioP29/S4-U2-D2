@@ -527,10 +527,16 @@ footer {
 @media screen and (min-width: 800px) {
   footer {
     padding: 1em 12em;
+    position: relative;
   }
 
   footer .icon1 {
     display: none;
+  }
+
+  .icon {
+    position: absolute;
+    padding-top: 10rem;
   }
 }
 

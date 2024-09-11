@@ -28,10 +28,58 @@ header {
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
 }
+@media screen and (min-width: 350px) {
+  /*RICHIESTA 3*/
+  header {
+    position: fixed;
+    top: 0;
+
+    z-index: 999;
+    width: 100%;
+    left: 0;
+  }
+  #top {
+    padding-top: 275px;
+  }
+}
+@media screen and (max-width: 800px) {
+  header .icon1 {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 800px) {
   header {
     padding: 1em;
+  }
+  .icon4 {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    padding: 5px;
+    width: 40px;
+    height: auto;
+    right: 10px;
+    border-radius: 6px;
+  }
+  .icon1 {
+    text-align: center;
+    display: block;
+  }
+  .icon1 i {
+    font-size: 24px;
+
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: solid 2px white;
+    margin-bottom: 30px;
+
+    color: blue;
+    cursor: pointer;
   }
 }
 
@@ -148,17 +196,7 @@ h1 + p {
     font-size: 1.8rem;
     font-weight: 700;
   }
-  /*RICHIESTA 3*/
-  header {
-    position: fixed;
-    top: 0;
 
-    z-index: 999;
-    width: 94%;
-  }
-  #top {
-    padding-top: 275px;
-  }
   /*RICHIESTA 4*/
   section {
     position: relative;
@@ -200,6 +238,10 @@ strong {
 .clearfix div {
   position: relative;
 }
+input {
+  display: inline-block;
+  width: 70%;
+}
 
 @media screen and (min-width: 500px) {
   h1 {
@@ -216,6 +258,47 @@ strong {
     font-size: 1.4rem;
     font-weight: 700;
   }
+}
+/*RICHIESTA 4*/
+section {
+  position: relative;
+}
+section h2 {
+  position: absolute;
+  top: -1rem;
+  width: 35%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*RICHIESTA 2*/
+h1 {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.underline {
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+/*RICHIESTA 1*/
+.imgLeft {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.clearfix div p,
+strong {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.clearfix div {
+  position: relative;
 }
 
 @media screen and (min-width: 700px) {
@@ -363,6 +446,19 @@ aside div {
   margin-bottom: 1em;
   padding: 1em;
 }
+@media screen and (min-width: 350px) {
+  aside div {
+    position: relative;
+  }
+  .icon3 {
+    font-size: 5rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    display: inline-block;
+    color: lightgray;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   aside div {
@@ -387,39 +483,54 @@ footer {
   text-align: center;
   font-size: 1.2rem;
 }
-@media screen and (max-width: 799px) {
+@media screen and (min-width: 350px) {
   footer {
-    display: inline-block;
+    padding: 1em;
+    position: relative;
+    width: 97%;
   }
-  footer div {
-    color: blue;
-    border: solid 2px white;
-
+  .icon {
+    position: absolute;
     right: 0;
-    display: inline-block;
+    top: 0;
+
     padding: 5px;
-    position: absolute;
-    width: 40px;
+    width: 40px; /* Larghezza del contenitore delle icone */
+    height: auto; /* Altezza automatica per adattarsi alle icone */
+    right: -19px;
     border-radius: 6px;
-    height: 44px;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.8); /* Sfondo bianco semi-trasparente */
   }
-  footer div i {
-    padding: 2px;
-    border: solid 2px;
-    position: absolute;
-    right: 0;
-    border-radius: 3px;
+  .icon1,
+  .icon2 {
+    text-align: center;
+  }
+  .icon1 i,
+  .icon2 i {
+    font-size: 24px;
 
-    right: 17%;
-    top: 16%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: solid 2px white;
+    margin-bottom: 100%;
+
+    color: blue;
+    cursor: pointer;
+  }
+  .icon2 i {
+    color: red;
   }
 }
 
 @media screen and (min-width: 800px) {
   footer {
     padding: 1em 12em;
+  }
+
+  footer .icon1 {
+    display: none;
   }
 }
 
